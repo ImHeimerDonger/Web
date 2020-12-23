@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- phpMyAdmin XML Dump
+- version 5.0.2
+- https://www.phpmyadmin.net
+-
+- Хост: 127.0.0.1:3306
+- Время создания: Ноя 22 2020 г., 18:17
+- Версия сервера: 10.3.22-MariaDB
+- Версия PHP: 7.1.33
+-->
+
+<pma_xml_export version="1.0" xmlns:pma="https://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Structure schemas
+    -->
+    <pma:structure_schemas>
+        <pma:database name="register-bd" collation="utf8mb4_unicode_ci" charset="utf8mb4">
+            <pma:table name="users">
+                CREATE TABLE `users` (
+                  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+                  `login` varchar(50) CHARACTER SET utf8 NOT NULL,
+                  `pass` varchar(32) CHARACTER SET utf8 NOT NULL,
+                  PRIMARY KEY (`id`),
+                  UNIQUE KEY `login` (`login`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+            </pma:table>
+        </pma:database>
+    </pma:structure_schemas>
+
+    <!--
+    - База данных: 'register-bd'
+    -->
+    <database name="register-bd">
+        <!-- Таблица users -->
+        <table name="users">
+            <column name="id">2</column>
+            <column name="login">Valera@Ignite.Machine</column>
+            <column name="pass">5d353d8e160103dd75689cf4ac322508</column>
+        </table>
+        <table name="users">
+            <column name="id">3</column>
+            <column name="login">whitetiger339@gmail.com</column>
+            <column name="pass">e1d1dd8e56cb325a21fa97c2fcba8eac</column>
+        </table>
+        <table name="users">
+            <column name="id">4</column>
+            <column name="login">Wee-Wee@Boy.NextDoor</column>
+            <column name="pass">8de032ac23295eed4e1399ff15bba348</column>
+        </table>
+    </database>
+</pma_xml_export>
